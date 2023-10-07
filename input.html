@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .name{
+            border: 2px solid black;
+            padding: 3px;
+            display: flex;
+            text-align: center;
+        }
+        .name:hover{
+            border: 3px solid yellow;
+            transition: box-shadow 1s;
+         
+        }
+        input:focus{
+            outline: none;
+            box-shadow: 0 0 5px 3px rgb(192, 86, 86);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Enter your name" class="name">
+</body>
+</html>
