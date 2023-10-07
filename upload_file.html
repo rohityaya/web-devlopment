@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload file</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+
+        }
+        section{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid;
+            width: 50vh;
+            height: 50vh;
+            text-align: center;
+            margin-left: 100px;
+            background-color: rgb(66, 59, 59);
+            padding: 2rem;
+            margin-top: 90px;
+            border: 2px solid red;
+            box-shadow: 5px 5px ;
+        }
+        h2{
+        color: white;
+        }
+        #img{
+            width: 150px;
+            height: 150px;
+            border: 2px solid white;
+            border-radius: 50%;
+            margin-left: 100px;
+            margin-top: 20px;
+        }
+        form{
+            margin-top: 20px;
+        }
+        #file{
+            display: none;
+            margin-top: 40px;
+        }
+        label{
+            margin-top: 50px;
+            border: 2px solid yellowgreen;
+            padding: 5px 7px;
+            font-size: 1.5rem;
+            color: white;
+           background-color: rgb(63, 92, 92);
+        }
+        label:hover{
+            background-color: rgb(86, 73, 99);
+            box-shadow: 0 0 5px 3px rgb(163, 136, 66);
+            color: rgb(87, 48, 48);
+        }
+
+    </style>
+</head>
+<body>
+    <section>   
+    <h2>Upload file</h2>
+    <img src="" alt="" id="img">
+    <form action="upload_file.html" method="post">
+        <input type="file" name="file" id="file">
+        <label for="file">Select a file</label>
+    </form>
+    </section>
+
+    <script>
+        const image = document.getElementById('img');
+        const input = document.getElementById('file');
+        input.addEventListener('change', (e) =>{
+            image.src = URL.createObjectURL(e.target.files[0]);
+        })
+    </script>
+</body>
+</html>
