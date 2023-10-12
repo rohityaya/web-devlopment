@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #red{
+            width: 100%;
+            height: 50vh;
+        }
+        #btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="red" onclick="fun()"></p>
+    <button id="btn" onclick="fun()">RED</button>
+    <script>
+        var btn = document.getElementById('btn')
+        var text1= "RED"
+        var p =document.getElementById('red')
+        var choice = 2
+        function fun(){
+            if (choice ==1) {
+                p.style.backgroundColor ="red"
+                choice=2 
+                btn.innerHTML = "Red"
+             
+            } else {
+                p.style.backgroundColor = "green"
+                choice=1
+              
+                btn.innerHTML = "Green"
+            }
+        }
+
+    </script>
+</body>
+</html>
