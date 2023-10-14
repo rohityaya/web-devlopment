@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Element Set Interval</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: chartreuse;
+            display: grid;
+            place-items: center;
+        }
+        .center{
+            width: 70%;
+            height: 70%;
+            background-color: blueviolet;
+        }
+        .center p {
+            text-align: justify;
+            font-size: 1.5rem;
+            padding: 20px;
+            color: white;
+        }
+        .center button{
+            width: 100%;
+            background-color: gold;
+            padding: 10px;
+            font-size: 1rem;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center">
+            <button onclick="fun() " id="btn">Change</button>
+            <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque exercitationem voluptatum, fuga dolorem, ex vitae necessitatibus non excepturi, possimus natus saepe! Ipsa, adipisci dolorum numquam architecto rerum, recusandae amet reprehenderit sed provident earum odio quas unde nihil odit voluptatum in necessitatibus nisi sapiente ullam. Quae corporis ducimus excepturi praesentium?</p>
+        </div>
+    </div>
+    <script>
+        var text1="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque exercitationem voluptatum, fuga dolorem, ex vitae necessitatibus non excepturi, possimus natus saepe! Ipsa, adipisci dolorum numquam architecto rerum, recusandae amet reprehenderit sed provident earum odio quas unde nihil odit voluptatum in necessitatibus nisi sapiente ullam. Quae corporis ducimus excepturi praesentium"
+        var text2="Dolores pariatur excepturi fugit mollitia obcaecati voluptate aperiam expedita eveniet nisi tempore omnis quasi, atque tenetur culpa sed nulla, iste facere eligendi libero perferendis saepe debitis nihil nemo minima? Ratione eius aspernatur nulla dicta ipsum quasi architecto culpa ex reiciendis sint quae earum accusantium alias pariatur nesciunt blanditiis fugiat, cupiditate voluptatibus! Officiis voluptatum, dolorum tempora et quod placeat, laboriosam incidunt sequi totam obcaecati explicabo cum modi commodi porro. Consequatur, nisi? Cum obcaecati neque eius aliquid dolorem officia optio atque deleniti excepturi nostrum"
+
+        var p = document.getElementById('para')
+        var btn = document.getElementById('btn')
+        var choice = 2
+        function fun(){
+            if (choice == 1) {
+                p.innerHTML = text1
+                btn.innerHTML= "Change"
+                choice = 2
+            } else {
+                p.innerHTML = text2
+                btn.innerHTML= "Reset"
+                choice = 1
+            }
+        }
+        setInterval(fun,2000)
+    </script>
+</body>
+</html>
